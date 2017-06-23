@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="~/Content/img/favicon-16x16.png">
+    @Styles.Render("~/Content/css")
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <img src="~/Content/img/robot.png" class="exceptMe-icon" /><h2 class="exceptMe-logo">ExceptMe</h2>
+        </div>
+        <ul>
+            @*<li>
+                <h2 class="exceptMe-logo">ExceptMe</h2>
+            </li>*@
+            <li class="neg-left">
+                <a href="#">Exception Log</a>
+            </li>
+            <li>
+                <a href="#">Resolved</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <!-- follow me template -->
+            <div class="made-with-love">
+                &copy; @DateTime.Now.Year - Made with
+                <i>♥</i> by
+                <a target="_blank" href="https://github.com/BrianSeng">Brian Sengsourichanh</a>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/ExceptMe/tableScrollResize.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

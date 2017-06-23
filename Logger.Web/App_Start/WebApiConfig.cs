@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Logger.Domain.Handlers;
 using System.Web.Http;
 
 namespace Logger.Web
@@ -19,6 +17,10 @@ namespace Logger.Web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Register custom handlers
+            config.MessageHandlers.Add(new WebApiMissingRouteHandler());
+            config.MessageHandlers.Add(new WebApiBadRequestHandler());
         }
     }
 }
