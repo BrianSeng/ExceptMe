@@ -67,7 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbContext\ExceptionContext.cs" />
+    <Compile Include="ExceptionDbContext.cs" />
     <Compile Include="Interfaces\IDao.cs" />
     <Compile Include="Models\Request\ExceptionSearchRequest.cs" />
     <Compile Include="Models\Response\BaseResponse.cs" />
